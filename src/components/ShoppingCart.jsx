@@ -7,7 +7,7 @@ const ShoppingCart = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders})
         <i className="bi bi-cart fs-3"></i>
         <div className="fw-bold ps-2">
           your cart
-          <span className="ms-1 px-2 py-1 rounded-circle text-success bg-body">
+          <span className="ms-2 px-2 py-1 rounded-circle text-success bg-body">
             {orders.reduce((accumulator, order) => accumulator + order.quantity, 0)}
           </span>
         </div>
