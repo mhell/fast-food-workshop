@@ -10,9 +10,9 @@ const FOODITEMS = [
   new Food("Burger", "A delicious burger with all the fixings.", 79.99),
   new Food("Pizza", "A classic pizza with your favorite toppings.", 99.99),
   new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99),
-  new Food("Burger", "A delicious burger with all the fixings.", 79.99),
-  new Food("Pizza", "A classic pizza with your favorite toppings.", 99.99),
-  new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99)
+  new Food("Hot Dog", "A grilled hot dog in a soft bun.", 49.99),
+  new Food("Chicken Nuggets", "Juicy chicken nuggets with a crispy coating.", 69.99),
+  new Food("Milkshake", "A thick and creamy milkshake.", 54.99),
 ];
 
 function App() {
