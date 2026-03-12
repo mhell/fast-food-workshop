@@ -1,13 +1,13 @@
 import FoodItem from "./FoodItem";
 
-const FoodItemList = ({foodItems}) => {
+const FoodItemList = ({foodItems, onNewOrder}) => {
   return (
     <main className="container my-5">
       <div className="row g-4 row-cols-3">
         {
           foodItems.map((foodItem) => (
             <div key={foodItem.id} className="col">
-              <FoodItem id={foodItem.id} name={foodItem.name} description={foodItem.description} price={foodItem.price} />
+              <FoodItem id={foodItem.id} name={foodItem.name} description={foodItem.description} price={foodItem.price} onNewOrder={onNewOrder} />
             </div>
           ))
         }

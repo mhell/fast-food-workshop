@@ -1,6 +1,6 @@
 import React from "react";
 
-const FoodItem = ({id, name, description, price}) => {
+const FoodItem = ({id, name, description, price, onNewOrder}) => {
   return (
     <div className="card text-bg-light">
       <div className="p-3">
@@ -12,9 +12,9 @@ const FoodItem = ({id, name, description, price}) => {
           {description}
         </p>
         <p className="fw-bold">SEK {price}</p>
-        <a href="#" className="btn btn-success">
+        <button href="#" className="btn btn-success" onClick={() => onNewOrder(id)}>
           Add to order
-        </a>
+        </button>
       </div>
     </div>
   );

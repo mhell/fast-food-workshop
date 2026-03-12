@@ -15,19 +15,28 @@ const FOODITEMS = [
   new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99)
 ];
 
-let orders = [
-  new Order(1, 2),
-  new Order(3, 1)
-];
-
 function App() {
+  const [orders, setOrders] = useState([])
+
+  function addOrder(foodId) {
+    const found = orders.find((order) => order.id === foodId);
+    if (found) {
+      // increase quantity if exist
+      found.quantity++;
+      setOrders([...orders]);
+    } else {
+      // add new otherwise
+      setOrders([...orders, new Order(foodId)]);
+    }
+  }
+  
   return (
     <>
       <Header>
         <ThemeSwitch />
         <ShoppingCart orders={orders} />
       </Header>
-      <FoodItemList foodItems={FOODITEMS} />
+      <FoodItemList foodItems={FOODITEMS} onNewOrder={addOrder}/>
     </>
   );
 }
