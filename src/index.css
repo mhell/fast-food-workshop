@@ -1,0 +1,8 @@
+[data-bs-theme=dark] .text-success {
+  color: var(--bs-white) !important;
+}
+
+[data-bs-theme=dark] .text-bg-light {
+  color: var(--bs-light) !important;
+  background-color: var(--bs-tertiary-bg) !important;
+}
