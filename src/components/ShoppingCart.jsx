@@ -1,6 +1,6 @@
 import CartModal from "./CartModal";
 
-const ShoppingCart = ({orders}) => {
+const ShoppingCart = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders}) => {
   return (
     <>
       <div className="text-bg-success px-4 rounded-pill d-inline-flex align-items-center" role="button" data-bs-toggle="modal" data-bs-target="#cartModal">
@@ -12,7 +12,7 @@ const ShoppingCart = ({orders}) => {
           </span>
         </div>
       </div>
-      <CartModal orders={orders} />
+      <CartModal orders={orders} foodItems={foodItems} onChangeQuantity={onChangeQuantity} onClearEmptyOrders={onClearEmptyOrders} />
     </>
   );
 };

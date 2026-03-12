@@ -19,7 +19,7 @@ function App() {
   const [orders, setOrders] = useState([])
 
   function addOrder(foodId) {
-    const found = orders.find((order) => order.id === foodId);
+    const found = orders.find((order) => order.foodId === foodId);
     if (found) {
       // increase quantity if exist
       found.quantity++;
@@ -29,12 +29,26 @@ function App() {
       setOrders([...orders, new Order(foodId)]);
     }
   }
-  
+
+  function changeQuantity(orderId, change) {
+    orders.forEach((origOrder) => {
+      if (origOrder.id === orderId && origOrder.quantity + change >= 0) {
+        origOrder.quantity += change;
+      }
+    });
+    setOrders([...orders]);
+  }
+
+  function clearEmptyOrders() {
+    const clearedOrders = orders.filter((order) => order.quantity > 0);
+    setOrders([...clearedOrders]);
+  }
+   
   return (
     <>
       <Header>
         <ThemeSwitch />
-        <ShoppingCart orders={orders} />
+        <ShoppingCart orders={orders} foodItems={FOODITEMS} onChangeQuantity={changeQuantity} onClearEmptyOrders={clearEmptyOrders} />
       </Header>
       <FoodItemList foodItems={FOODITEMS} onNewOrder={addOrder}/>
     </>

@@ -1,18 +1,20 @@
-const OrderItem = () => {
+const OrderItem = ({id, quantity, name, price, onChangeQuantity}) => {
   return (
-    <div className="d-flex align-items-center justify-content-between my-3">
-      <div className="fw-bold text-start" style={{flex: "1"}}>Cheeseburger</div>
+    <>
+      <div className="fw-bold text-start" style={{flex: "1"}}>
+        {name}
+      </div>
       <div className="text-center" style={{flex: "1"}}>
-        <button type="button" className="btn btn-light">
+        <button type="button" className="btn btn-light" onClick={() => onChangeQuantity(id, -1)}>
           <i className="bi bi-dash"></i>
         </button>
-        <span className="mx-3">2</span>
-        <button type="button" className="btn btn-light">
+        <span className="mx-3">{quantity}</span>
+        <button type="button" className="btn btn-light"  onClick={() => onChangeQuantity(id, +1)}>
           <i className="bi bi-plus"></i>
         </button>
       </div>
-      <div style={{flex: "1"}}>$6.99</div>
-    </div>
+      <div style={{flex: "1"}}>SEK {price}</div>
+    </>
   );
 };
 
