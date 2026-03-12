@@ -10,7 +10,7 @@ const FoodItem = () => {
           A delicious burger with all the fixings.
         </p>
         <p className="fw-bold">SEK 79.99</p>
-        <a href="#" className="btn btn-primary">
+        <a href="#" className="btn btn-success">
           Add to order
         </a>
       </div>

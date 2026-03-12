@@ -24,7 +24,7 @@ const CartModal = () => {
             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
               Cancel
             </button>
-            <button type="button" className="btn btn-primary">
+            <button type="button" className="btn btn-success">
               Place order
             </button>
           </div>
