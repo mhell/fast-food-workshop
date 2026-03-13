@@ -1,6 +1,6 @@
 import OrderItem from "./OrderItem";
 
-const CartModal = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders}) => {
+const Checkout = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders}) => {
   return (
     <div className="modal fade" id="cartModal" tabIndex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
       <div className="modal-dialog modal-lg modal-dialog-centered">
@@ -51,4 +51,4 @@ const CartModal = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders}) =>
   );
 };
 
-export default CartModal;
+export default Checkout;

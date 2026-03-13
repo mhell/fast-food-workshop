@@ -6,3 +6,9 @@
   color: var(--bs-light) !important;
   background-color: var(--bs-tertiary-bg) !important;
 }
+
+.food-item img {
+  max-height: 300px;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}

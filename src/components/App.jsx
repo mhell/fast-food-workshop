@@ -3,16 +3,17 @@ import Header from "./Header";
 import FoodItemList from "./FoodItemList";
 import ThemeSwitch from "./ThemeSwitch";
 import ShoppingCart from "./ShoppingCart";
+import Checkout from "./Checkout";
 import Food from "../model/Food";
 import Order from "../model/Order";
 
 const FOODITEMS = [
-  new Food("Burger", "A delicious burger with all the fixings.", 79.99),
-  new Food("Pizza", "A classic pizza with your favorite toppings.", 99.99),
-  new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99),
-  new Food("Hot Dog", "A grilled hot dog in a soft bun.", 49.99),
-  new Food("Chicken Nuggets", "Juicy chicken nuggets with a crispy coating.", 69.99),
-  new Food("Milkshake", "A thick and creamy milkshake.", 54.99),
+  new Food("Burger", "A delicious burger with all the fixings.", 79.99, "/src/assets/burger.jpg"),
+  new Food("Pizza", "A classic pizza with your favorite toppings.", 99.99, "/src/assets/pizza.jpg"),
+  new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99, "/src/assets/fries.jpg"),
+  new Food("Hot Dog", "A grilled hot dog in a soft bun.", 49.99, "/src/assets/hotdog.jpg"),
+  new Food("Chicken Nuggets", "Juicy chicken nuggets with a crispy coating.", 69.99, "/src/assets/nuggets.jpg"),
+  new Food("Milkshake", "A thick and creamy milkshake.", 54.99, "/src/assets/milkshake.jpg"),
 ];
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         <ShoppingCart orders={orders} foodItems={FOODITEMS} onChangeQuantity={changeQuantity} onClearEmptyOrders={clearEmptyOrders} />
       </Header>
       <FoodItemList foodItems={FOODITEMS} onNewOrder={addOrder}/>
+      <Checkout orders={orders} foodItems={FOODITEMS} onChangeQuantity={changeQuantity} onClearEmptyOrders={clearEmptyOrders} />
     </>
   );
 }

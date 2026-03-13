@@ -1,10 +1,10 @@
 import React from "react";
 
-const FoodItem = ({id, name, description, price, onNewOrder}) => {
+const FoodItem = ({id, name, description, price, image, onNewOrder}) => {
   return (
-    <div className="card text-bg-light">
+    <div className="food-item card text-bg-light">
       <div className="p-3">
-        <img src="https://placehold.co/600x400" className="card-img-top rounded" alt="Burger" />
+        <img src={image} className="card-img-top rounded" alt={name} />
       </div>
       <div className="card-body">
         <h5 className="card-title">{name}</h5>

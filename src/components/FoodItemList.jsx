@@ -7,7 +7,7 @@ const FoodItemList = ({foodItems, onNewOrder}) => {
         {
           foodItems.map((foodItem) => (
             <div key={foodItem.id} className="col">
-              <FoodItem id={foodItem.id} name={foodItem.name} description={foodItem.description} price={foodItem.price} onNewOrder={onNewOrder} />
+              <FoodItem id={foodItem.id} name={foodItem.name} description={foodItem.description} price={foodItem.price} image={foodItem.image} onNewOrder={onNewOrder} />
             </div>
           ))
         }
