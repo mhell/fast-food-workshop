@@ -4,7 +4,7 @@ const FoodItem = ({id, name, description, price, image, onNewOrder}) => {
   return (
     <div className="food-item card text-bg-light">
       <div className="p-3">
-        <img src={image} className="card-img-top rounded" alt={name} />
+        <img src={import.meta.env.BASE_URL+image} className="card-img-top rounded" alt={name} />
       </div>
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
