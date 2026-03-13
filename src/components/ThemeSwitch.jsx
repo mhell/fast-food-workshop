@@ -7,7 +7,7 @@ const ThemeSwitch = () => {
 
   return (
     <div role="button" onClick={() => setIsDarkTheme(!isDarkTheme)}>
-      {isDarkTheme ? <i className="bi bi-moon fs-4"></i> : <i className="bi bi-sun fs-3"></i>}
+      {isDarkTheme ? <i className="bi bi-sun fs-3"></i> : <i className="bi bi-moon fs-4"></i>}
     </div>
   );
 };
