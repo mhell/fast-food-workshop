@@ -9,7 +9,7 @@ const Checkout = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders}) => 
             <h1 className="modal-title fs-3 flex-grow-1 text-center" id="cartModalLabel">
               Your Order
             </h1>
-            <button type="button" className="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" className="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close" onClick={() => onClearEmptyOrders()}></button>
           </div>
           <div className="modal-body d-flex flex-column">
             <h2 className="fs-5 text-start mb-3">Order details</h2>
