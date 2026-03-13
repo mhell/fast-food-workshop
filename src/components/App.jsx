@@ -8,12 +8,12 @@ import Food from "../model/Food";
 import Order from "../model/Order";
 
 const FOODITEMS = [
-  new Food("Burger", "A delicious burger with all the fixings.", 79.99, "/src/assets/burger.jpg"),
-  new Food("Pizza", "A classic pizza with your favorite toppings.", 99.99, "/src/assets/pizza.jpg"),
-  new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99, "/src/assets/fries.jpg"),
-  new Food("Hot Dog", "A grilled hot dog in a soft bun.", 49.99, "/src/assets/hotdog.jpg"),
-  new Food("Chicken Nuggets", "Juicy chicken nuggets with a crispy coating.", 69.99, "/src/assets/nuggets.jpg"),
-  new Food("Milkshake", "A thick and creamy milkshake.", 54.99, "/src/assets/milkshake.jpg"),
+  new Food("Burger", "A delicious burger with all the fixings.", 79.99, "/images/burger.jpg"),
+  new Food("Pizza", "A classic pizza with your favorite toppings.", 99.99, "/images/pizza.jpg"),
+  new Food("Fries", "Crispy golden fries served hot and fresh.", 59.99, "/images/fries.jpg"),
+  new Food("Hot Dog", "A grilled hot dog in a soft bun.", 49.99, "/images/hotdog.jpg"),
+  new Food("Chicken Nuggets", "Juicy chicken nuggets with a crispy coating.", 69.99, "/images/nuggets.jpg"),
+  new Food("Milkshake", "A thick and creamy milkshake.", 54.99, "/images/milkshake.jpg"),
 ];
 
 function App() {

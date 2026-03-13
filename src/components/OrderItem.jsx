@@ -13,7 +13,7 @@ const OrderItem = ({id, quantity, name, price, onChangeQuantity}) => {
           <i className="bi bi-plus"></i>
         </button>
       </div>
-      <div style={{flex: "1"}}>SEK {price * quantity}</div>
+      <div style={{flex: "1"}}>SEK {(price * quantity).toFixed(2)}</div>
     </>
   );
 };
