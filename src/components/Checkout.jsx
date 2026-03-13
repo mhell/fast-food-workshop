@@ -27,13 +27,13 @@ const Checkout = ({orders, foodItems, onChangeQuantity, onClearEmptyOrders}) => 
                 })
             }
             <div className="text-end mt-auto pt-3">
-              Total: SEK
+              Total: 
               <span className="ms-3 fw-bold">
                 {orders.reduce((accumulator, order) => {
                     const price = foodItems.find((f) => f.id === order.foodId)?.price;
                     return accumulator + price * order.quantity;
                   }, 0).toFixed(2)
-                }
+                } kr
               </span>
             </div>
           </div>
